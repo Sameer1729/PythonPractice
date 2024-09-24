@@ -1,0 +1,32 @@
+'''
+Python Program to Find the Frequency of Characters in a String
+
+Create a Python function named char_freq that takes a string as input and returns a dictionary containing the frequency of each character in that string. The function should be case-sensitive, meaning 'A' and 'a' should be counted as different characters.
+
+Task Description:
+Initialize an Empty Dictionary: To store the frequency of each character.
+Iterate Over the String: Loop through each character in the string.
+Count Character Frequencies: Update the dictionary with the count of each character.
+Return the Dictionary: After the loop, return the dictionary with the character frequencies.
+Example:
+Input: "Hello, World!"
+Output: {'H': 1, 'e': 1, 'l': 3, 'o': 2, ',': 1, ' ': 1, 'W': 1, 'r': 1, 'd': 1, '!': 1}
+You can use this description to write the function and then test it with the example provided or any other string you'd like to try! 
+'''
+def char_freq(string):
+    # Initialize an empty dictionary to store frequency of characters
+    frequency = {}
+
+    # Iterate over each character in the string
+    for char in string:
+        if char in frequency:
+            frequency[char] += 1  # Increment the count of the character in the dictionary
+        else:
+            frequency[char] = 1   # Add the character to the dictionary with count 1
+
+    # Return the dictionary containing character frequencies
+    return frequency
+
+# Test the function with an example
+result = char_freq("Hello World")
+print(result)
